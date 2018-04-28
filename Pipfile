@@ -11,6 +11,7 @@ pylint = "*"
 flask = "*"
 gunicorn = "*"
 marshmallow = "*"
+pymongo = "==3.4"
 
 [requires]
 python_version = "3.5"

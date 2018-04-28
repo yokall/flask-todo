@@ -4,7 +4,8 @@ from marshmallow import Schema, fields
 
 
 class ToDo():
-    def __init__(self, description, done):
+    def __init__(self, _id, description, done):
+        self._id = _id
         self.description = description
         self.done = done
         self.created_at = dt.datetime.now()
@@ -14,6 +15,7 @@ class ToDo():
 
 
 class ToDoSchema(Schema):
+    _id = fields.Str()
     description = fields.Str()
     done = fields.Boolean()
     created_at = fields.Date()
